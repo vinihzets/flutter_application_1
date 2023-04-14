@@ -18,6 +18,8 @@ class ViewBloc {
     _event = StreamController.broadcast();
 
     _state = StreamController.broadcast();
+
+    _event.stream.listen(_mapListenEvent);
   }
 
   dispatchEvent(Event event) {
